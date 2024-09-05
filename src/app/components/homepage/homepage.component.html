@@ -1,0 +1,29 @@
+<div class="content">
+    <div class="dropdown">
+        <select class='select-option' #mySelect (change)="curNs = mySelect.value; saveActive=false">
+        <option class='option' *ngFor='let ns of nsArr'>{{ns}}</option>
+        </select>
+        <button class="dropdown-button" (click)="getWhenClicked()">Get</button>
+        <button class="dropdown-button" (click)="getNoMatches()">No Match</button>
+        <img class="save-button" *ngIf="saveActive && curNs!='Select Namespace'" (click)="saveToDb()" src="assets/save.svg">
+    </div>
+
+    <div class="table">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Namespace</th>
+                    <th>Version</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of items">
+                    <td>{{item.name}}</td>
+                    <td>{{item.namespace}}</td>
+                    <td>{{item.version}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

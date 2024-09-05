@@ -1,0 +1,14 @@
+<div class="header">
+    <div [routerLink]="username ? '/' : null" class="proje">
+        <h1>{{projectname}}</h1>
+    </div>
+    <div class="namespace" *ngIf="username">
+        <button routerLink="/namespace" class="namespace-button">Namespace</button>
+    </div>
+    <div class="history" *ngIf="username">
+        <button routerLink="/history" class="history-button">History</button>
+    </div>
+    <div class="user">
+        <p>{{username}}</p>
+    </div>
+</div>

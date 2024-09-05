@@ -1,0 +1,27 @@
+<div class="content">
+    <div class="inputs">
+        <input #envInput class="env-input" placeholder="Environment">
+        <input #dateInput class="date-input" type="date">
+        <button class="get-button" (click)="getSaved(envInput.value, dateInput.value)">Get Saved</button>
+    </div>
+    <div class="table">
+        <table>
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Namespace</th>
+                    <th>Date</th>
+                    <th>Username</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let db of dbitems">
+                    <td>{{db.data}}</td>
+                    <td>{{db.namespace}}</td>
+                    <td>{{db.date}}</td>
+                    <td>{{db.username}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

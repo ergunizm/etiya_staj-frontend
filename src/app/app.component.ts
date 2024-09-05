@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'staj';
+
+  // username: string = ""
+
+  // receiveUsername(username: string) {
+  //   this.username = username;
+  // }
 }
